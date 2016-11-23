@@ -1,4 +1,4 @@
-# adsenseLoader.js
+# lazyLoadGoogleMaps.js
 A JavaScript plugin for lazy-loading Google Maps.
 
 ## Usage and Demo
