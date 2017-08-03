@@ -15,10 +15,10 @@ window.googleMapsScriptLoaded = function()
 {
 	'use strict';
 
-	var $window			= $( window ),
-		$body			= $( 'body' ),
-		windowHeight	= $window.height(),
-		windowScrollTop	= 0,
+	var $window					= $( window ),
+			$body						= $( 'body' ),
+			windowHeight		= $window.height(),
+			windowScrollTop	= 0,
 
 		debounce = function( delay, fn )
 		{
@@ -51,7 +51,7 @@ window.googleMapsScriptLoaded = function()
 
 		apiScriptLoaded	 = false,
 		apiScriptLoading = false,
-		$containers		 = $([]),
+		$containers			 = $([]),
 
 		init = function( callback )
 		{
@@ -59,8 +59,8 @@ window.googleMapsScriptLoaded = function()
 
 			$containers.each( function()
 			{
-				var $this		= $( this ),
-					thisOptions = $this.data( 'options' );
+				var $this				= $( this ),
+						thisOptions = $this.data( 'options' );
 
 				if( $this.offset().top - windowScrollTop > windowHeight * 1 )
 					return true;
@@ -69,14 +69,13 @@ window.googleMapsScriptLoaded = function()
 				{
 					var apiArgs =
 					{
-						callback:	'googleMapsScriptLoaded',
-						signed_in:	thisOptions.signed_in
+						callback: 'googleMapsScriptLoaded'
 					};
 
-					if( thisOptions.key )		apiArgs.key			= thisOptions.key;
+					if( thisOptions.key )				apiArgs.key				= thisOptions.key;
 					if( thisOptions.libraries )	apiArgs.libraries	= thisOptions.libraries;
 					if( thisOptions.language )	apiArgs.language	= thisOptions.language;
-					if( thisOptions.region )	apiArgs.region		= thisOptions.region;
+					if( thisOptions.region )		apiArgs.region		= thisOptions.region;
 
 					$body.append( '<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&' + $.param( apiArgs ) + '"></script>' );
 					apiScriptLoading = true;
@@ -92,8 +91,7 @@ window.googleMapsScriptLoaded = function()
 			});
 		};
 
-	$window
-	.on( 'googleMapsScriptLoaded',function()
+	$window.on( 'googleMapsScriptLoaded',function()
 	{
 		apiScriptLoaded = true;
 		init();
@@ -108,15 +106,14 @@ window.googleMapsScriptLoaded = function()
 	$.fn.lazyLoadGoogleMaps = function( options )
 	{
 		options = $.extend(
-					{
-						key:  		false,
-						libraries:	false,
-						signed_in:	false,
-						language:	false,
-						region:		false,
-						callback: 	false,
-					},
-					options );
+		{
+			key:  		 false,
+			libraries: false,
+			language:	 false,
+			region:		 false,
+			callback:  false,
+		},
+		options );
 
 		this.each( function()
 		{
