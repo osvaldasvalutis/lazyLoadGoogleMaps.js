@@ -1,0 +1,19 @@
+{
+  "name": "lazyloadgooglemaps.js",
+  "version": "1.0.0",
+  "description": "A JavaScript plugin for lazy-loading Google Maps.",
+  "main": "jquery.lazyLoadGoogleMaps.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/osvaldasvalutis/lazyLoadGoogleMaps.js.git"
+  },
+  "author": "Osvaldas Valutis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/osvaldasvalutis/lazyLoadGoogleMaps.js/issues"
+  },
+  "homepage": "https://github.com/osvaldasvalutis/lazyLoadGoogleMaps.js#readme"
+}
