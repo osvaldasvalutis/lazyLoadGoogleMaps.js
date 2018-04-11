@@ -1,5 +1,5 @@
 {
-  "name": "lazyloadgooglemaps.js",
+  "name": "lazyLoadGoogleMaps.js",
   "version": "1.0.0",
   "description": "A JavaScript plugin for lazy-loading Google Maps.",
   "main": "jquery.lazyLoadGoogleMaps.js",
